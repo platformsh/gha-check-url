@@ -12,8 +12,8 @@ Given a URL, performs a curl GET request and validates the server response again
 
 ## Example Usage
 ```yaml
-    - name: 'Get our Project ID'
-      id: get-projectid
+    - name: 'Is our URL responding to requests?'
+      id: test-url-for-response
       uses: platformsh/gha-check-url@main
       with:
         test_url: 'https://platform.sh/'
