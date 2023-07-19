@@ -49,7 +49,7 @@ runs:
       id: 'test-header-response-value'
       shell: bash
       run: |
-        if [[ ! ${{ inputs.http_response }} =~ ^[0-9]+$ ]]; then
+        if [[ ! "${{ inputs.http_response }}" =~ ^[0-9]+$ ]]; then
           msg="The value you gave for HTTP response status code is not a valid number. Please double check the value you've used, and run the action again."
           echo "::error::${msg}"
           exit 1;
