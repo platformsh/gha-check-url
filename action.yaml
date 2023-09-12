@@ -32,7 +32,7 @@ runs:
         url=${{ inputs.test_url }}
         urlRE='^https?:\/\/[^\/]+\.[^\.\/\n]{2,}\/?$'
         if [[ ! "${url}" =~ $urlRE ]]; then
-          echo"::error::The value you gave for URL does not appear to be valid. Please double-check the value you are giving me."
+          echo "::error::The value you gave for the URL does not appear to be valid. Please double-check the value you are giving me."
         fi;
 
     # Check that what the calling workflow gave us for report_results is something we can use
